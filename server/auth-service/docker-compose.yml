@@ -1,20 +1,19 @@
-version: 3.8
-
 services:
   mysql:
-    image: mysql:8
+    image: mysql:lts
     restart: always
     environment:
-      MYSQL_DATABASE=sinergy
-      MYSQL_ROOT_PASSWORD=mysqlroot
+      MYSQL_DATABASE: sinergy
+      MYSQL_ROOT_PASSWORD: mysqlroot
     ports:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     
   auth-service:
-    build: ./auth-service
-    container_name: auth-service
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8081:8081"
     depends_on:
@@ -27,7 +26,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  mysql_data
+  mysql_data:
       
 
 

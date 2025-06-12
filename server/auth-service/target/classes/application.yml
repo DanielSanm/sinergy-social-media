@@ -10,5 +10,5 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  aplication:
+  application:
     name: auth-service
