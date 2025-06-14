@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         # add other services over time
-        service: [auth-service]
+        service: [auth-service, user-service]
 
     steps:
       # cloning repository
