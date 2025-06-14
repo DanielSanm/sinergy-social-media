@@ -43,7 +43,7 @@ services:
     
   auth-service:
     build:
-      context: ./auth-service
+      context: ./server/auth-service
       dockerfile: Dockerfile
     container_name: auth-service
     restart: always
@@ -61,7 +61,7 @@ services:
 
   user-service:
     build:
-      context: ./user-service
+      context: ./server/user-service
       dockerfile: Dockerfile
     container_name: user-service
     restart: always
