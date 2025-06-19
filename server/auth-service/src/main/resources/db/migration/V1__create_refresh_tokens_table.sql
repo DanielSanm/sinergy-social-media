@@ -1,0 +1,7 @@
+CREATE TABLE refresh_tokens (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    token BINARY(16) NOT NULL UNIQUE,
+    user_id BIGINT NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    revoked BOOLEAN NOT NULL DEFAULT FALSE
+);
