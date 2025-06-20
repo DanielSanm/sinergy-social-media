@@ -1,7 +1,6 @@
 package com.sinergy.user.entity;
 
 import java.time.Instant;
-import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
