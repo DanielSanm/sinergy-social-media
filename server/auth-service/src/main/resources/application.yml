@@ -26,10 +26,10 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
 
-#jwt:
-#  private-key: classpath:jwt/app.key
-#  public-key: classpath:jwt/app.pub
-#  ttl: 15m
+jwt:
+  private-key: classpath:jwt/app.key
+  public-key: classpath:jwt/app.pub
+  ttl: 15m
 
 #management:
 #  endpoints:
