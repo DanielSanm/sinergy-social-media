@@ -35,12 +35,12 @@ public class UserService {
 	public User register(User user) {
 		
 		if (userRepository.existsByUsername(user.getUsername())) {
-			throw new ResourceConflicException("Username [%] is already taken"
+			throw new ResourceConflicException("Username [%s] is already taken"
 					.formatted(user.getUsername()));
 		}
 		
 		if (userRepository.existsByEmail(user.getEmail())) {
-			throw new ResourceConflicException("Email [%] is already taken"
+			throw new ResourceConflicException("Email [%s] is already taken"
 					.formatted(user.getEmail()));
 		}
 		
