@@ -34,8 +34,8 @@ internal:
 
 logging:
   level:
-    root: DEBUG
-    web: DEBUG
+    root: INFO
+    web: INFO
 # management:
 #   endpoints:
 #     web:
