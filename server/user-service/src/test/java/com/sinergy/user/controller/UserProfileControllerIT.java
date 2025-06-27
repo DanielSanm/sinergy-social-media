@@ -9,10 +9,10 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.sinergy.user.test.IntegrationTestBase;
+import com.sinergy.user.test.IntegrationTestContext;
 
 @AutoConfigureMockMvc
-public class UserProfileControllerIT extends IntegrationTestBase {
+public class UserProfileControllerIT extends IntegrationTestContext {
 
 	private final String USER_JSON = """
             {

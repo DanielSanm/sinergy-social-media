@@ -26,13 +26,13 @@ public class UserProfileController {
 	private final UserService userService;
 	private final UserRegisterMapper userMapper;
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<User> getUser(@PathVariable Long id) {
+	@GetMapping("/id/{id}")
+	public ResponseEntity<User> getUserById(@PathVariable Long id) {
 		return ResponseEntity.ok(userService.getUserById(id));
 	}
 	
-	@GetMapping("/{username}")
-	public ResponseEntity<User> getUser(@PathVariable String username) {
+	@GetMapping("/name/{username}")
+	public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
 		return ResponseEntity.ok(userService.getUserByUsername(username));
 	}
 	

@@ -10,10 +10,10 @@ import org.springframework.context.annotation.Import;
 
 import com.sinergy.user.config.JpaConfig;
 import com.sinergy.user.entity.User;
-import com.sinergy.user.test.IntegrationTestBase;
+import com.sinergy.user.test.IntegrationTestContext;
 
 @Import(JpaConfig.class)
-public class UserRepositoryIT extends IntegrationTestBase {
+public class UserRepositoryIT extends IntegrationTestContext {
 
 	private User testUser;
 	

@@ -26,6 +26,16 @@ spring:
     locations: classpath:db/migration
     baseline-on-migrate: true
 
+jwt:
+  public-key: classpath:jwt/app.pub
+
+internal:
+  api-key: fd6c5819-3f7c-4fa6-a89f-b07a8ac7400b
+
+logging:
+  level:
+    root: DEBUG
+    web: DEBUG
 # management:
 #   endpoints:
 #     web:

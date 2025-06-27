@@ -32,18 +32,18 @@ public class JwtConfig {
 	private Duration ttl;
 	
 	@Bean
-    public JwtEncoder jwtEncoder() {
+    JwtEncoder jwtEncoder() {
         var jwk = new RSAKey.Builder(publicKey).privateKey(privateKey).build();
         return new NimbusJwtEncoder(new ImmutableJWKSet<>(new JWKSet(jwk)));
     }
 
     @Bean
-    public JwtDecoder jwtDecoder() {
+    JwtDecoder jwtDecoder() {
         return NimbusJwtDecoder.withPublicKey(publicKey).build();
     }
 
     @Bean
-    public JwtService jwtService(@Value("${spring.application.name}") String appName, JwtEncoder jwtEncoder) {
+    JwtService jwtService(@Value("${spring.application.name}") String appName, JwtEncoder jwtEncoder) {
         return new JwtService(appName, ttl, jwtEncoder);
     }
 }

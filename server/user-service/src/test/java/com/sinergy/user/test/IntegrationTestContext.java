@@ -9,7 +9,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Testcontainers
 @SpringBootTest
-public class IntegrationTestBase {
+public class IntegrationTestContext {
 	
 	@Container
     public static MySQLContainer<?> mysql = new MySQLContainer<>("mysql:8.4")

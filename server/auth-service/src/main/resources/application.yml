@@ -31,6 +31,15 @@ jwt:
   public-key: classpath:jwt/app.pub
   ttl: 15m
 
+user-service:
+  url: http://user-service:8080
+  api-key: fd6c5819-3f7c-4fa6-a89f-b07a8ac7400b
+
+logging:
+  level:
+    root: DEBUG
+    web: DEBUG
+  
 #management:
 #  endpoints:
 #    web:
